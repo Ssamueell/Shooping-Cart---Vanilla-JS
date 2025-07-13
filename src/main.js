@@ -29,8 +29,6 @@ let generateShop = () => {
         `;
     }).join('');
 };
-
-
 generateShop();
 
 let incrementCount = (id) => {
@@ -59,9 +57,6 @@ let incrementCount = (id) => {
     localStorage.setItem("shop-stock", JSON.stringify(shopItemsData));
 };
 
-
-
-
 let decrementCount = (id) => {
     let product = shopItemsData.find(prod => prod.id === id);
     let basketItem = basket.find(item => item.id === id);
@@ -82,7 +77,6 @@ let decrementCount = (id) => {
     basket = basket.filter((item) => item.count !== 0);
     localStorage.setItem("shop-products", JSON.stringify(basket));
     localStorage.setItem("shop-stock", JSON.stringify(shopItemsData));
-
 };
 
 let update = (id) => {
@@ -92,7 +86,6 @@ let update = (id) => {
     document.getElementById(id).innerHTML = search.count;
     carAmount();
 };
-
 
 let carAmount = () => {
     let cartAmount = document.querySelector(".cartAmount");
@@ -106,4 +99,3 @@ let carAmount = () => {
 }
 
 carAmount();
-
