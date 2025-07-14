@@ -59,7 +59,7 @@ To clear the cart, open the browser console and run:
 localStorage.removeItem("shop-products");
 
 # 👤 Author
-##Samuel Werlang
-##GitHub: @Ssamueell
+## Samuel Werlang
+## GitHub: @Ssamueell
 
 
