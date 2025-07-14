@@ -1,71 +1,70 @@
-# Shooping-Cart---Vanilla-JS
-A Shopping cart made using only vanilla javascript, HTML and CSS
+##🛒 Shopping Cart - Vanilla JavaScript (with Stock Limit Feature)
+An interactive, lightweight, and functional shopping cart built entirely with Vanilla JavaScript, HTML, and CSS. This project includes data persistence via localStorage and real-time stock limit control.
 
-# 🛒 Shopping Cart - Vanilla JavaScript (Stock Limit Feature)
+>✅ No frameworks or external libraries
+>🎯 Perfect for learning DOM manipulation, events, logic, and local storage
+>📦 Stock control support: users cannot exceed the available quantity
 
-Um carrinho de compras interativo, leve e funcional desenvolvido 100% em **JavaScript puro (Vanilla JS)**. Este projeto inclui persistência de dados via `localStorage` e controle de **limite de estoque** em tempo real.
+#🚀 Features
+Dynamically generated product listing
 
-> ✅ Sem frameworks ou bibliotecas  
-> 🎯 Ideal para aprendizado de DOM, eventos, lógica e armazenamento local  
-> 📦 Suporte a limite de estoque por item
+Add, remove, and update item quantity in the cart
 
----
+Real-time updates for total items and prices
 
-## 🚀 Funcionalidades
+Persistent cart using localStorage
 
-- Listagem de produtos gerada dinamicamente
-- Adição, remoção e alteração de quantidade no carrinho
-- Atualização em tempo real do total de itens e preço
-- Persistência via `localStorage`
-- 🔥 Controle de estoque: usuário não pode exceder o limite de unidades disponíveis
-- Interface com feedback dinâmico do estoque restante
+🔥 Stock control: users can't exceed available units
 
----
+Interface shows remaining stock with dynamic feedback
 
-## 🧠 Tecnologias Utilizadas
+#🧠 Technologies Used
+HTML5 – page structure
 
-- **HTML5** – estrutura da página  
-- **CSS3** – estilo e layout  
-- **JavaScript (ES6)** – lógica e interações  
-- **LocalStorage API** – persistência de dados no navegador
+CSS3 – styling and layout
 
----
+JavaScript (ES6) – logic and interactivity
 
-## 📁 Estrutura do Projeto
+LocalStorage API – client-side data persistence
 
-```plaintext
+#📁 Project Structure
+plaintext
+Copy
+Edit
 Shooping-Cart---Vanilla-JS/
 │
-├── index.html             # Página principal com os produtos
-├── cart.html              # Página do carrinho             # Estilos gerais
+├── index.html             # Main page with product listings
+├── cart.html              # Cart page
 ├── src/
-│   ├── script.js          # Lógica de exibição dos produtos
-│   ├── cart.js
-|   ├── style.css            # Lógica do carrinho
-│   └── data.js            # Dados dos produtos
-├── imgs/                  # Imagens dos produtos
-└── README.md              # Este arquivo
-```
+│   ├── script.js          # Product display logic
+│   ├── cart.js            # Cart logic
+│   ├── style.css          # General styling
+│   └── data.js            # Product data
+├── imgs/                  # Product images
+└── README.md              # This file
+➕ Add a New Product
+Open data.js and add a new product object like this:
 
-➕ Adicionar Novo Produto
-Abra data.js e adicione um novo objeto:
-
+js
+Copy
+Edit
 {
   id: "product-id",
-  name: "Nome do Produto",
+  name: "Product Name",
   price: 99,
-  desc: "Descrição curta",
-  img: "imgs/sua-imagem.jpg",
+  desc: "Short description",
+  img: "imgs/your-image.jpg",
   stock: 10
 }
+Place the corresponding image in the /imgs folder.
 
-Coloque a imagem correspondente na pasta /imgs.
-
-🔄 Resetar Carrinho
-Abra o console do navegador e digite:
+🔄 Reset the Cart
+To clear the cart, open the browser console and run:
 
 localStorage.removeItem("shop-products");
 
-👤 Autor
+👤 Author
 Samuel Werlang
 GitHub: @Ssamueell
+
+
