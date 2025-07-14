@@ -61,9 +61,6 @@ let incrementCount = (id) => {
     localStorage.setItem("shop-stock", JSON.stringify(shopItemsData));
 };
 
-
-
-
 let decrementCount = (id) => {
     let product = shopItemsData.find(prod => prod.id === id);
     let basketItem = basket.find(item => item.id === id);
@@ -95,7 +92,6 @@ let update = (id) => {
     carAmount();
 };
 
-
 let carAmount = () => {
     let cartAmount = document.querySelector(".cartAmount");
     let totalCount = basket.reduce((acc, item) => acc + item.count, 0);
@@ -108,4 +104,3 @@ let carAmount = () => {
 }
 
 carAmount();
-
