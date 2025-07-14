@@ -2,7 +2,7 @@
 
 let label = document.getElementById("label");
 let shoppingCart = document.getElementById("shopping-cart");
-
+let shopItemsData = JSON.parse(localStorage.getItem("shop-stock")) || defaultShopItemsData;
 let basket = JSON.parse(localStorage.getItem("shop-products")) || [];
 
 let cartAmount = () => {
@@ -23,7 +23,7 @@ let generateCartItems = () => {
         return shoppingCart.innerHTML = basket.map((basketItem) => {
             let {id, count} = basketItem;
             let search = shopItemsData.find((product => product.id === id)) || [];
-            let {name, price, desc, img} = search;
+            let {name, price, desc, img, stock} = search;
             return `
             <div class="cart-item">
                 <img width="100" height ="100" src="${img}" alt="">
@@ -36,11 +36,12 @@ let generateCartItems = () => {
                         <i onclick="removeItem('${id}');" class="bi bi-x-lg"></i>
                     </div>
                     <div class="buttons">
-                        <i onclick="decrementCount('${id}')" class="bi bi-dash-lg"></i>
+                        <i onclick="decrementCount('${id}'), generateCartItems()" class="bi bi-dash-lg"></i>
                         <div id="${id}" class="quantity">${count}</div>
-                        <i onclick="incrementCount('${id}')" class="bi bi-plus-lg"></i>
-                    </div>
+                        <i onclick="incrementCount('${id}'), generateCartItems()" class="bi bi-plus-lg"></i>
+                        </div>
                         <h3>$ ${count * price}</h3>
+                        <div class="cart-item-stock">🏷️ ${stock? stock : "Sold Out"}</div>
                 </div>
             </div>
             `
@@ -59,37 +60,54 @@ let generateCartItems = () => {
 generateCartItems();
 
 let incrementCount = (id) => {
+    let product = shopItemsData.find(prod => prod.id === id);
+    let basketItem = basket.find(item => item.id === id);
 
-    let search = basket.find(basketItem => basketItem.id === id);
-    if(!search) {
+    if(product.stock <= 0) {
+        return alert("No Stock!")
+    }
+
+    if(!basketItem) {
         basket.push({
             id: id,
-            count : 1
+            count : 1,
+            stock : product.stock - 1
         })
+        product.stock -= 1;
     } else {
-        search.count += 1;
-    }
-    generateCartItems();
-    update(id);
+        basketItem.count += 1;
+        basketItem.stock -= 1;
+        product.stock -=1;
+    };
+
     localStorage.setItem("shop-products", JSON.stringify(basket));
+    localStorage.setItem("shop-stock", JSON.stringify(shopItemsData));
+    update(id);
+    generateCartItems();
+    cartAmount();
     totaAmount();
 };
 
 let decrementCount = (id) => {
+    let product = shopItemsData.find(prod => prod.id === id);
+    let basketItem = basket.find(item => item.id === id);
     
-    let search = basket.find(basketItem => basketItem.id === id);
-    if(!search) {
+    if(!basketItem) {
         return;
-    } else if(search.count === 0){
+    } else if(basketItem.count === 0){
         return;
     } else {
-        search.count -= 1;
+        basketItem.count -= 1;
+        basketItem.stock += 1;
+        product.stock += 1;
     }
 
-    update(id);
     basket = basket.filter((item) => item.count !== 0);
-    generateCartItems();
     localStorage.setItem("shop-products", JSON.stringify(basket));
+    localStorage.setItem("shop-stock", JSON.stringify(shopItemsData));
+    update(id);
+    generateCartItems();
+    cartAmount();
     totaAmount();
 };
 
@@ -103,7 +121,9 @@ let update = (id) => {
 
 let removeItem = (id) => {
     basket = basket.filter(item => item.id !== id);
+    shopItemsData = defaultShopItemsData;
     localStorage.setItem("shop-products", JSON.stringify(basket));
+    localStorage.setItem("shop-stock", JSON.stringify(shopItemsData));
     generateCartItems();
     cartAmount();
     totaAmount();
@@ -111,7 +131,9 @@ let removeItem = (id) => {
 
 let clearCart = () => {
     basket = [];
+    shopItemsData = defaultShopItemsData;
     localStorage.setItem("shop-products", JSON.stringify(basket));
+    localStorage.setItem("shop-stock", JSON.stringify(shopItemsData));
     generateCartItems();
     cartAmount();
 
@@ -128,7 +150,7 @@ let totaAmount = () => {
             })
             .reduce((acc, item) => acc + item, 0);
         label.innerHTML = `
-        <h2>Total Bill : $ ${amount}</h2>
+        <h2>$ ${amount}</h2>
         <button class="checkout">Checkout</button>
         <button onclick="clearCart()"class="removeAll">Clear Cart</button>
         `
