@@ -5,6 +5,7 @@ let shopItemsData = [
     price: 45,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-1.jpg",
+    stock : 0,
   },
   {
     id: "ioytrhndcv",
@@ -12,6 +13,7 @@ let shopItemsData = [
     price: 100,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-2.jpg",
+    stock : 20,
   },
   {
     id: "wuefbncxbsn",
@@ -19,6 +21,7 @@ let shopItemsData = [
     price: 25,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-3.jpg",
+    stock : 10,
   },
   {
     id: "thyfhcbcv",
@@ -26,6 +29,7 @@ let shopItemsData = [
     price: 300,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-4.jpg",
+    stock : 15,
   },
   {
     id: "thiecbawdjksadjk",
@@ -33,6 +37,7 @@ let shopItemsData = [
     price: 25,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-5.png",
+    stock : 0,
   },
   {
     id: "iuertrywebncdjksadjk",
@@ -40,6 +45,7 @@ let shopItemsData = [
     price: 200,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-6.png",
+    stock : 17,
   },
   {
     id: "thierytbvcbvzdhadjk",
@@ -47,6 +53,7 @@ let shopItemsData = [
     price: 450,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-7.png",
+    stock : 3,
   },
   {
     id: "trfoiwfcnbcawdjksadjk",
@@ -54,6 +61,7 @@ let shopItemsData = [
     price: 45,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-8.png",
+    stock : 20,
   },
   {
     id: "cbvxbcvsceldk",
@@ -61,6 +69,7 @@ let shopItemsData = [
     price: 85,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-9.png",
+    stock : 18,
   },
   {
     id: "oiopijmjkhuihb",
@@ -68,6 +77,7 @@ let shopItemsData = [
     price: 120,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-10.png",
+    stock : 2,
   },
   {
     id: "oiopijewyiohbjhib",
@@ -75,6 +85,7 @@ let shopItemsData = [
     price: 35,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-11.png",
+    stock : 15,
   },
   {
     id: "rtytytuyuytyytbvncv",
@@ -82,5 +93,6 @@ let shopItemsData = [
     price: 350,
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
     img: "images/img-12.png",
+    stock : 5,
   },
 ];
