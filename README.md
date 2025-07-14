@@ -2,7 +2,7 @@
 An interactive, lightweight, and functional shopping cart built entirely with Vanilla JavaScript, HTML, and CSS. This project includes data persistence via localStorage and real-time stock limit control.
 
 >- ✅ No frameworks or external libraries
->- 🎯 Perfect for learning DOM manipulation, events, logic, and local storage
+>- 🎯 DOM manipulation, events, logic, and local storage
 >- 📦 Stock control support: users cannot exceed the available quantity
 
 ## 🚀 Features
