@@ -33,17 +33,19 @@ Um carrinho de compras interativo, leve e funcional desenvolvido 100% em **JavaS
 
 ## 📁 Estrutura do Projeto
 
+```plaintext
 Shooping-Cart---Vanilla-JS/
 │
-├── index.html # Página principal com os produtos
-├── cart.html # Página do carrinho
-├── style.css # Estilos gerais
+├── index.html             # Página principal com os produtos
+├── cart.html              # Página do carrinho
+├── style.css              # Estilos gerais
 ├── src/
-│ ├── script.js # Lógica de exibição dos produtos
-│ ├── cart.js # Lógica do carrinho
-│ └── data.js # Dados dos produtos
-├── imgs/ # Imagens dos produtos
-└── README.md # Este arquivo
+│   ├── script.js          # Lógica de exibição dos produtos
+│   ├── cart.js            # Lógica do carrinho
+│   └── data.js            # Dados dos produtos
+├── imgs/                  # Imagens dos produtos
+└── README.md              # Este arquivo
+```
 
 ➕ Adicionar Novo Produto
 Abra data.js e adicione um novo objeto:
