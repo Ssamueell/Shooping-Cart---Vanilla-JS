@@ -14,7 +14,7 @@ Real-time updates for total items and prices
 
 Persistent cart using localStorage
 
-##🔥 Stock control: users can't exceed available units
+## Stock control: users can't exceed available units
 
 Interface shows remaining stock with dynamic feedback
 
