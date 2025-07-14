@@ -1,9 +1,9 @@
 # 🛒 Shopping Cart - Vanilla JavaScript (with Stock Limit Feature)
 An interactive, lightweight, and functional shopping cart built entirely with Vanilla JavaScript, HTML, and CSS. This project includes data persistence via localStorage and real-time stock limit control.
 
-> ✅ No frameworks or external libraries
-> 🎯 Perfect for learning DOM manipulation, events, logic, and local storage
-> 📦 Stock control support: users cannot exceed the available quantity
+>- ✅ No frameworks or external libraries
+>- 🎯 Perfect for learning DOM manipulation, events, logic, and local storage
+>- 📦 Stock control support: users cannot exceed the available quantity
 
 ## 🚀 Features
 Dynamically generated product listing
@@ -53,12 +53,12 @@ Open data.js and add a new product object like this:
 }
 Place the corresponding image in the /imgs folder.
 
-##🔄 Reset the Cart
+## 🔄 Reset the Cart
 To clear the cart, open the browser console and run:
 
 localStorage.removeItem("shop-products");
 
-#👤 Author
+# 👤 Author
 ##Samuel Werlang
 ##GitHub: @Ssamueell
 
