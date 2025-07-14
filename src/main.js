@@ -33,9 +33,6 @@ let generateShop = () => {
     }).join('');
 };
 
-
-
-
 generateShop();
 
 let incrementCount = (id) => {
