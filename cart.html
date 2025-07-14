@@ -13,21 +13,33 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="index.html">
-            <h2>Clothing Store</h2>
-        </a>
-        <a href="cart.html">
-            <div class="cart">
-            <i class="bi bi-cart2"></i>
-            <div class="cartAmount">0</div>
+        <div class="navbar-left">
+            <a href="index.html" id="nav-logo">
+                <h1>MonoWear</h1>
+            </a>
         </div>
-        </a>
+
+        <div class="navbar-center">
+            <div class="searchbar">
+                <input type="text" id="searchbar-text" placeholder="Search...">
+                <i class="bi bi-search"></i>
+            </div>
+        </div>
+
+        <div class="navbar-right">
+            <a href="cart.html">
+                <div class="cart">
+                    <i class="bi bi-cart2"></i>
+                    <div class="cartAmount">0</div>
+                </div>
+            </a>
+        </div>
     </div>
 
     <div id="label" class="text-center"></div>
     <div class="shopping-cart" id="shopping-cart"></div>
-
+    <script src="src/products.js"></script>
+    <script src="src/cart.js"></script>
+    
 </body>
-<script src="src/products.js"></script>
-<script src="src/cart.js"></script>
 </html>
